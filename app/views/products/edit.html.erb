@@ -1,0 +1,48 @@
+<div class='container'>
+    <h1>Edit Product</h1>
+    <div class='col-md-8' >
+   <div class="panel panel-default">
+    <div class="panel-body">
+    <%=form_for @product, :html => {:class => "form-horizontal center"} do |p| %>
+        <div class="form-group">
+        
+            <%= p.label :name, "Name:", class: "col-md-4 control-label"  %>
+            <div class="col-xs-4">
+                <%= p.text_field :name, class: "form-control" %>
+            </div>
+        </div>
+         <div class="form-group">
+            <%= p.label :description, "Description:", class: "col-md-4 control-label"  %>
+            <div class="col-xs-4">
+                <%= p.text_area :description, class: "form-control" %>
+            </div>
+        </div>
+        <div class="form-group">
+        
+            <%= p.label :imagesrc, "Image Source:", class: "col-md-4 control-label"  %>
+            <div class="col-xs-4">
+                <%= p.text_field :imagesrc, class: "form-control" %>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <div class="form-group">
+        
+            <%= p.label :kind, "Product Type:", class: "col-md-4 control-label"  %>
+            <div class="col-xs-4">
+            <%= p.select(:kind, options_for_select([['Book'], ['Item'],['Furniture']], 'Book'), {}, {:class => "selectpicker form-control"})%>
+
+            </div>
+            <br/>
+             
+        </div>
+       
+        <%= p.submit 'Submit', :class => "btn btn-primary form-horizontal center" %>
+        </div>
+        
+    <% end %>
+  </div>
+</div>
+
+</div>
+</div>

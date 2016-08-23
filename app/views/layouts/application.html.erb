@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workspace</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+   <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Cinzel">
+          <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Trirong">
+    <style>
+      h1, h2, h3, h4, h5, h6, a, input{
+        font-family: 'Cinzel', serif;
+      }
+      p, input{
+        font-family: 'Trirong';
+        font-size: medium;
+      }
+    </style>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href="https://fonts.google.com/specimen/Pinyon+Script?selection.family=Pinyon+Script" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="container">
+  <nav class="navbar navbar-default">
+      <a class="navbar-brand" href="/home/index">Brown Antiques</a>
+      <ul class="nav navbar-nav">
+        <li class="nav-item <%= 'active' if current_page?(home_index_path) %>">
+          <a class="nav-link" href="/home/index">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item <%= 'active' if current_page?(products_path) %>">
+          <a class="nav-link" href="/products">For Sale</a>
+        </li>
+        <li class="nav-item <%= 'active' if current_page?(root_path) %>">
+          <a class="nav-link" href="http://v4-alpha.getbootstrap.com/examples/jumbotron/#">Contact</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="/login">Login</a></li>
+      <li><a href="/users/new">Create an Account</a></li>
+    </ul>
+    </nav>
+  </div>
+<%= yield %>
+
+</body>
+
+</html>

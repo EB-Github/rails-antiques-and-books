@@ -1,0 +1,48 @@
+<div class='container'>
+    <h1>New User</h1>
+    <div class='col-md-8' >
+   <div class="panel panel-default">
+    <div class="panel-body">
+    <%=form_for :product, :html => {:class => "form-horizontal center"} do |p| %>
+        <div class="form-group">
+        
+            <%= p.label :name, "Name:", class: "col-md-4 control-label"  %>
+            <div class="col-xs-4">
+                <%= p.text_field :name, class: "form-control" %>
+            </div>
+        </div>
+         <div class="form-group">
+            <%= p.label :email, "Email Address:", class: "col-md-4 control-label"  %>
+            <div class="col-xs-4">
+                <%= p.text_field :email, class: "form-control" %>
+            </div>
+        </div>
+        <div class="form-group">
+            <%= p.label :password, "Password:", class: "col-md-4 control-label"  %>
+            <div class="col-xs-4">
+                <%= p.text_field :password, class: "form-control" %>
+            </div>
+        </div>
+        <div class="form-group">
+            <%= p.label :confirmpassword, "Confirm Password:", class: "col-md-4 control-label"  %>
+            <div class="col-xs-4">
+                <%= p.text_field :confirmpassword, class: "form-control" %>
+            </div>
+        </div>
+        <div class="form-group center">
+        
+            
+            <div class="col-xs-4 center">
+             <%= p.submit 'Submit', :class => "btn btn-primary form-horizontal center" %>
+
+            </div>
+            <br/>
+             
+        </div>
+       
+    <% end %>
+  </div>
+</div>
+
+</div>
+</div>
